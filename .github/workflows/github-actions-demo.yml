@@ -35,7 +35,11 @@ jobs:
       - name: Build Release APK
         run: ./gradlew assembleRelease
 
+      - name: SonarQube Scan
+        uses: kitabisa/sonarqube-action@v1.1.1
+
       - name: Move apk to artifact
         uses: actions/upload-artifact@v2
         with:
-          path: '**/*.apk'
+          name: "unsigned.apk"
+          path: "artifacts/unsigned.apk"
