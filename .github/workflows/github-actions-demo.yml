@@ -31,6 +31,11 @@ jobs:
           # Update build name
           Write-Host "##vso[build.updatebuildnumber]$AppVersionNumericSeparatedByDots"
         shell: pwsh
-  
+
       - name: Build Release APK
         run: ./gradlew assembleRelease
+
+      - name: Move apk to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: '**/*.apk'
