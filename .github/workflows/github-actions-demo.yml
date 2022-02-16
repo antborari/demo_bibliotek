@@ -4,7 +4,7 @@ on:
     branches: main
 
 jobs:
-  CICD:
+  build:
 
     runs-on: ubuntu-latest
 
