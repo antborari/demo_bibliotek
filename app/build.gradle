@@ -5,6 +5,13 @@ plugins {
     id 'kotlin-parcelize'
     id 'com.google.gms.google-services'
     id 'dagger.hilt.android.plugin'
+    id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "demo_bibliotek"
+    }
 }
 
 android {
