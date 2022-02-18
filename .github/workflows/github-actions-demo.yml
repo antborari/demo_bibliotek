@@ -81,3 +81,22 @@ jobs:
         with:
           name: app-release-signed
           path: ${{steps.sign_apk.outputs.signedReleaseFile}}
+
+      - name: Build AAB
+        run: ./gradlew bundleRelease
+
+      - name: Sign AAB
+        id: sign_aab
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: app/build/outputs/bundle/release
+          signingKeyBase64: ${{ secrets.SIGNINGKEYBASE64 }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
+          keyPassword: ${{ secrets.KEYPASSWORD }}
+
+      - name: Make artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-release-signed
+          path: ${{steps.sign_aab.outputs.signedReleaseFile}}
