@@ -65,3 +65,11 @@ jobs:
         with:
           name: "unsigned.apk"
           path: "artifacts/unsigned.apk"
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: testers
+          file: artifacts/app-release.aab

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "125174541394",
-    "project_id": "bibliotek-ea984",
-    "storage_bucket": "bibliotek-ea984.appspot.com"
+    "project_number": "698648152026",
+    "project_id": "bibliotek-22628",
+    "storage_bucket": "bibliotek-22628.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:125174541394:android:b22a48e0e8e75ca956c38b",
+        "mobilesdk_app_id": "1:698648152026:android:34733b02e8f42a3413a2e3",
         "android_client_info": {
           "package_name": "com.javright.bibliotek"
         }
       },
       "oauth_client": [
         {
-          "client_id": "125174541394-g9uatubb82h157qmvp8e621v4ejp7r76.apps.googleusercontent.com",
+          "client_id": "698648152026-bie7hudr6ci6bsteqv6bfgvb5ef8u03h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBD5whntkVxBxz7iRvOWTjRXMZoXseLUX8"
+          "current_key": "AIzaSyBaCHX4zj5_pFdFN6LZLqPP3fwG3vwrM5I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "125174541394-g9uatubb82h157qmvp8e621v4ejp7r76.apps.googleusercontent.com",
+              "client_id": "698648152026-bie7hudr6ci6bsteqv6bfgvb5ef8u03h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
