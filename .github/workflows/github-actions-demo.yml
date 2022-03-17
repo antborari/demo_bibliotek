@@ -100,3 +100,11 @@ jobs:
         with:
           name: app-release-signed
           path: ${{steps.sign_aab.outputs.signedReleaseFile}}
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: testers
+          file: artifacts/app-release.aab
