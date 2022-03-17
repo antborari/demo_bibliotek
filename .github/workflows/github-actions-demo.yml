@@ -107,4 +107,4 @@ jobs:
           appId: ${{secrets.FIREBASE_APP_ID}}
           token: ${{secrets.FIREBASE_TOKEN}}
           groups: testers
-          file: artifacts/app-release.aab
+          file: app-release-signed/app-release.aab
