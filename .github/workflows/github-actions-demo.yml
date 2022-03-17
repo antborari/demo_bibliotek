@@ -101,8 +101,8 @@ jobs:
           name: app-release-signed
           path: ${{steps.sign_aab.outputs.signedReleaseFile}}
 
-      - name: Build Release APK
-        run: ./gradlew assembleRelease
+      - name: upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
           token: ${{secrets.FIREBASE_TOKEN}}
